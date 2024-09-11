@@ -25,12 +25,19 @@
 
 
             int p = 4, q = 6;
-            int sum, mul;
+            //int sum, mul;
 
-            Calculate(p, q, out sum, out mul);
+            Calculate(p, q, out int sum, out int mul);
 
             Console.WriteLine("Sum = " + sum);
             Console.WriteLine("Mul = " + mul);
+
+
+            Console.Write("\n\nEnter a number: ");
+            if (int.TryParse(Console.ReadLine(), out int x))
+                Console.WriteLine("x = " + x);
+            else
+                Console.WriteLine("Invalid input. Please try again.");
         }
 
 
