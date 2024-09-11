@@ -33,11 +33,32 @@
             Console.WriteLine("Mul = " + mul);
 
 
-            Console.Write("\n\nEnter a number: ");
-            if (int.TryParse(Console.ReadLine(), out int x))
-                Console.WriteLine("x = " + x);
-            else
-                Console.WriteLine("Invalid input. Please try again.");
+            //Console.Write("\n\nEnter a number: ");
+            //if (int.TryParse(Console.ReadLine(), out int x))
+            //    Console.WriteLine("x = " + x);
+            //else
+            //    Console.WriteLine("Invalid input. Please try again.");
+
+
+            Console.WriteLine("\n\np = " + p + ", q = " + q);
+            Console.WriteLine($"p = {p}, q = {q}");
+            Console.WriteLine("p = {0}, q = {1}", p, q);
+
+
+
+            PrintArray(a);
+            PrintArray(3, 4, 5, 76, 8, 9, 8, 5, 6, 5, 4, 3, 4);
+        }
+
+
+
+        static void PrintArray(params int[] arr)
+        {
+            Console.WriteLine("\n\nNumber of items: " + arr.Length);
+
+            foreach (int i in arr)
+                Console.Write(i + " ");
+            Console.WriteLine();
         }
 
 
